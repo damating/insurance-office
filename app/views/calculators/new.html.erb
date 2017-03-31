@@ -12,21 +12,20 @@
           </ul>
         <% end %>
 
-
         <div class="row">
             <div class="col-md-6 form-group contact-form">
-              <%= f.input :contact_name, input_html: {class: 'form-control form-form'}, label_html: {class: 'label-contact'}, label: 'Imię i nazwisko', required: true %>
+              <%= f.input :contact_name, :as => :string, input_html: {class: 'form-control form-form'}, label_html: {class: 'label-contact'}, label: 'Imię i nazwisko', required: true %>
             </div>
             <div class="col-md-6 form-group contact-form">
-              <%= f.input :email, input_html: {class: 'form-control form-form'}, label_html: {class: 'label-contact'}, label: 'Email', required: true %>
+              <%= f.input :email, :as => :email, input_html: {class: 'form-control form-form'}, label_html: {class: 'label-contact'}, label: 'Email', required: true %>
             </div>
         </div>
         <div class="row">
             <div class="col-md-6 form-group contact-form">
-              <%= f.input :pesel, as: :integer, input_html: {class: 'form-control form-form pesel'}, label_html: {class: 'label-contact'}, label: 'Pesel' %>
+              <%= f.input :pesel, input_html: {class: 'form-control form-form pesel'}, label_html: {class: 'label-contact'}, label: 'Pesel' %>
             </div>
             <div class="col-md-6 form-group contact-form">
-              <%= f.input :phone_number, input_html: {class: 'form-control form-form'}, label_html: {class: 'label-contact'}, label: 'Telefon kontaktowy' %>
+              <%= f.input :phone_number, :as => :tel, input_html: {class: 'form-control form-form'}, label_html: {class: 'label-contact'}, label: 'Telefon kontaktowy' %>
             </div>
         </div>
         <div class="row">
@@ -79,7 +78,7 @@
         $('#calculator_menu').addClass('active');
 
         $('.zipcode').mask('00-000');
-        // $('.pesel').mask('00000000000');
+        $('.pesel').mask('00000000000');
     })
 </script>
 

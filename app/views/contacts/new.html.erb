@@ -5,13 +5,13 @@
     <div class="col-md-8">
       <%= simple_form_for @contact do |f| %>
           <div class="form-group contact-form">
-            <%= f.input :name, input_html: {class: 'form-control form-form'}, label_html: {class: 'label-contact'}, label: 'Nazwisko', required: true %>
+            <%= f.input :name, :as => :string, input_html: {class: 'form-control form-form'}, label_html: {class: 'label-contact'}, label: 'Nazwisko', required: true %>
           </div>
           <div class="form-group contact-form">
-            <%= f.input :email, input_html: {class: 'form-control form-form'}, label_html: {class: 'label-contact'}, label: 'Email', required: true %>
+            <%= f.input :email, :as => :email, input_html: {class: 'form-control form-form'}, label_html: {class: 'label-contact'}, label: 'Email', required: true %>
           </div>
           <div class="form-group contact-form">
-            <%= f.input :subject, input_html: {class: 'form-control form-form'}, label_html: {class: 'label-contact'}, label: 'Temat wiadomości' %>
+            <%= f.input :subject, :as => :string, input_html: {class: 'form-control form-form'}, label_html: {class: 'label-contact'}, label: 'Temat wiadomości' %>
           </div>
           <div class="form-group contact-form">
             <%= f.input :message, :as => :text, input_html: {class: 'form-control form-form'}, label_html: {class: 'label-contact'}, label: 'Wiadomość', required: true %>
