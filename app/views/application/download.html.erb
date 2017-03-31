@@ -1,0 +1,22 @@
+<div class="download_page">
+  <div class="container">
+    <h3 class="agileits-title">Dokumenty do pobrania</h3>
+    <ul class="download_files_list">
+      <li><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span><%= link_to 'Oświadczenie o zwrot składki ubezpieczeniowej', 'zwrot_skladki_ubezpieczeniowej.pdf', download: 'Oświadczenie o zwrot składki ubezpieczeniowej' %></li>
+      <li><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span><%= link_to 'Oświadczenie o zwrot składki ubezpieczeniowej', 'zwrot_skladki_ubezpieczeniowej.pdf', download: 'Oświadczenie o zwrot składki ubezpieczeniowej' %></li>
+      <li><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span><%= link_to 'Umowa kupna sprzedaży samochodu', 'umowa_kupna_sprzedazy_samochodu.pdf', download: 'Umowa kupna sprzedaży samochodu' %></li>
+      <li><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span><%= link_to 'Oświadczenie sprawcy kolizji', 'oswiadczenie_sprawcy_kolizji.pdf', download: 'Oświadczenie sprawcy kolizji' %></li>
+      <li><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span><%= link_to 'Wypowiedzenie OC nabywcy od 11 lutego 2012r.', 'wypowiedzenie_oc_nabywcy.pdf', download: 'Wypowiedzenie OC nabywcy od 11 lutego 2012r' %></li>
+      <li><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span><%= link_to 'Wypowiedzenie art. 28', 'wypowiedzenie_art_28.pdf', download: 'Wypowiedzenie art 28' %></li>
+      <li><span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span><%= link_to 'Wypowiedzenie ubezpieczenia OC w przypadku podwójnego ubezpieczenia 28a.pdf', 'wypowiedzenie_ubezpieczenia_oc_w_przypadku_podwojnego_ubezpieczenia_28a.pdf', download: 'Wypowiedzenie ubezpieczenia OC w przypadku podwójnego ubezpieczenia 28a' %></li>
+    </ul>
+  </div>
+</div>
+
+
+<script>
+    $(document).ready(function ($) {
+        $('.nav li').removeClass('active');
+        $('#download_menu').addClass('active');
+    })
+</script>

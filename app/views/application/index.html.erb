@@ -1,0 +1,178 @@
+<!--slider company logos-->
+<div id="jssor_1" style="position: relative; margin: 0 auto; top: 0px; left: 0px; width: 2170px; height: 140px; overflow: hidden; visibility: hidden;">
+  <!-- Loading Screen -->
+  <div data-u="loading" style="position: absolute; top: 0px; left: 0px;">
+    <div style="filter: alpha(opacity=70); opacity: 0.7; position: absolute; display: block; top: 0px; left: 30px; width: 100%; height: 100%;"></div>
+    <div style="position:absolute;display:block;background:url('/assets/loading.gif') no-repeat center center;top:0px;left:0px;width:100%;height:100%;"></div>
+  </div>
+  <div data-u="slides" style="cursor: default; position: relative; top: 0px; left: 0px; width: 2170px; height: 140px; overflow: hidden;">
+    <div style="display: none;">
+      <img data-u="image" src="assets/PZU_logo2.png"/>
+    </div>
+    <div style="display: none;">
+      <img data-u="image" src="assets/warta_logo.png"/>
+    </div>
+    <div style="display: none;">
+      <img data-u="image" src="assets/HDI_logo.png"/>
+    </div>
+    <div style="display: none;">
+      <img data-u="image" src="assets/generali_logo.png"/>
+    </div>
+    <div style="display: none;">
+      <img data-u="image" src="assets/uniqa_logo.png"/>
+    </div>
+    <div style="display: none;">
+      <img data-u="image" src="assets/gothaer_logo.png"/>
+    </div>
+    <div style="display: none;">
+      <img data-u="image" src="assets/mtu_logo.png"/>
+    </div>
+    <div style="display: none;">
+      <img data-u="image" src="assets/aviva_logo.png"/>
+    </div>
+    <div style="display: none;">
+      <img data-u="image" src="assets/axa_logo.png"/>
+    </div>
+    <div style="display: none;">
+      <img data-u="image" src="assets/ergo_hestia_logo.png"/>
+    </div>
+    <div style="display: none;">
+      <img data-u="image" src="assets/interrisk_logo.png"/>
+    </div>
+    <div style="display: none;">
+      <img data-u="image" src="assets/proama_logo.png"/>
+    </div>
+    <div style="display: none;">
+      <img data-u="image" src="assets/tuz_logo.png"/>
+    </div>
+    <div style="display: none;">
+      <img data-u="image" src="assets/PZU_logo2.png"/>
+    </div>
+    <div style="display: none;">
+      <img data-u="image" src="assets/warta_logo.png"/>
+    </div>
+    <div style="display: none;">
+      <img data-u="image" src="assets/HDI_logo.png"/>
+    </div>
+    <div style="display: none;">
+      <img data-u="image" src="assets/generali_logo.png"/>
+    </div>
+    <div style="display: none;">
+      <img data-u="image" src="assets/uniqa_logo.png"/>
+    </div>
+    <div style="display: none;">
+      <img data-u="image" src="assets/gothaer_logo.png"/>
+    </div>
+    <div style="display: none;">
+      <img data-u="image" src="assets/mtu_logo.png"/>
+    </div>
+    <div style="display: none;">
+      <img data-u="image" src="assets/aviva_logo.png"/>
+    </div>
+    <div style="display: none;">
+      <img data-u="image" src="assets/axa_logo.png"/>
+    </div>
+    <div style="display: none;">
+      <img data-u="image" src="assets/ergo_hestia_logo.png"/>
+    </div>
+    <div style="display: none;">
+      <img data-u="image" src="assets/interrisk_logo.png"/>
+    </div>
+    <div style="display: none;">
+      <img data-u="image" src="assets/proama_logo.png"/>
+    </div>
+    <div style="display: none;">
+      <img data-u="image" src="assets/tuz_logo.png"/>
+    </div>
+  </div>
+</div>
+
+<% unless flash[:notice].nil? && flash[:error].nil? %>
+    <div class="modal show" id="myModal" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" onclick="$('#myModal').removeClass('show')">&times;</button>
+          </div>
+          <div class="modal-body text-center">
+            <% flash.each do |key, value| %>
+                <h4><%= value %></h4>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+<% end %>
+
+<div class="about_us">
+  <div class="container">
+    <h3 class="head">O firmie</h3>
+
+    <p class="company_info">
+      Jesteśmy agencją z ponad piętnastoletnim doświadczeniem w branży ubezpieczeniowej. Do każdego klienta podchodzimy
+      indywidualnie,
+      tak aby dostosować najkorzystniejsze warunki ubezpieczenia do jego potrzeb. Naszym atutem jest profesjonalizm,
+      doświadczenie oraz
+      przyjazne podejście do klienta. Obecnie mamy w swojej ofercie 14 towarzystw ubezpieczeniowych, które
+      charakteryzują się szerokim
+      zakresem działalności. Dzięki temu zdobywamy zaufanie klientów.
+    </p>
+    <div class="centered_button">
+      <%= link_to 'Napisz do nas', contact_path, class: "btn btn-info" %>
+    </div>
+  </div>
+</div>
+
+<%= render 'services' %>
+
+<section class="info_w3ls3">
+  <div class="container">
+    <h3 class="agileits-title text-center">Dbamy o zadowolenie klientów</h3>
+    <p class="text-center">Dodatkowym atutem naszej agencji jest mobilność. Dojeżdżamy do klientów zarówno na terenie Krakowa jak i okolic.</p>
+  </div>
+</section>
+
+
+<script>
+    jQuery(document).ready(function ($) {
+
+        $(document).ready(function ($) {
+            $('.nav li').removeClass('active');
+            $('#about_company_menu').addClass('active');
+        })
+
+        var jssor_1_options = {
+            $AutoPlay: true,
+            $Idle: 0,
+            $AutoPlaySteps: 4,
+            $SlideDuration: 1600,
+            $SlideEasing: $Jease$.$Linear,
+            $PauseOnHover: 4,
+            $SlideWidth: 140,
+            $Cols: 13,
+            $FillMode: 1,
+            $SlideSpacing: 20
+        };
+
+        var jssor_1_slider = new $JssorSlider$("jssor_1", jssor_1_options);
+
+        //responsive code begin
+        //you can remove responsive code if you don't want the slider scales while window resizing
+        function ScaleSlider() {
+            var refSize = jssor_1_slider.$Elmt.parentNode.clientWidth;
+            if (refSize) {
+                refSize = Math.min(refSize, 2170);
+                jssor_1_slider.$ScaleWidth(refSize);
+            }
+            else {
+                window.setTimeout(ScaleSlider, 30);
+            }
+        }
+
+        ScaleSlider();
+        $(window).bind("load", ScaleSlider);
+        $(window).bind("resize", ScaleSlider);
+        $(window).bind("orientationchange", ScaleSlider);
+        //responsive code end
+    });
+</script>

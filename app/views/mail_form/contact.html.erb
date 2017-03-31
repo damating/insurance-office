@@ -1,0 +1,28 @@
+<% if @resource.is_a?(Contact) %>
+    <p>Imię: <%= @resource.name %></p>
+    <p>Email: <%= @resource.email %></p>
+    <p>Wiadomość: <%= @resource.message %></p>
+<% else %>
+    <p><h4>Dane wysyłającego:</h4></p>
+    <p>Imię: <%= @resource.contact_name %></p>
+    <p>Email: <%= @resource.email %></p>
+    <p>Telefon: <%= @resource.phone_number %></p>
+    <p>Pesel: <%= @resource.pesel %></p>
+    <hr>
+
+    <p><h4>Dane pojazdu:</h4></p>
+    <p>Marka: <%= @resource.brand %></p>
+    <p>Model: <%= @resource.model %></p>
+    <p>VIN: <%= @resource.vin %></p>
+    <p>Pojemność: <%= @resource.capacity %></p>
+    <p>Moc: <%= @resource.power %></p>
+    <p>Rok produkcji: <%= @resource.year %></p>
+    <p>Zarejestowany: <%= @resource.registered_zipcode %></p>
+    <p>Data urodzenia właściciela: <%= @resource.owner_birth %></p>
+    <p>Data posiadania pojazdu: <%= @resource.driving_licence_issue_date %></p>
+    <p>Poprzedni zakład ubezpieczeń: <%= @resource.previous_insurance_company %></p>
+    <p>Zniżki na ostatniej polisie: <%= @resource.last_policy_discount %></p>
+    <p>Ilość szkód w ostatnim roku: <%= @resource.last_year_damage_amount %></p>
+<% end %>
+    <hr>
+    <p>Data wysłania: <%= DateTime.now.to_formatted_s(:db) %></p>

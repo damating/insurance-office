@@ -1,0 +1,126 @@
+<div class="contact_page">
+  <div class="container">
+    <h3 class="head">Kontakt</h3>
+
+    <div class="col-md-8">
+      <%= simple_form_for @contact do |f| %>
+          <div class="form-group contact-form">
+            <%= f.input :name, input_html: {class: 'form-control form-form'}, label_html: {class: 'label-contact'}, label: 'Nazwisko', required: true %>
+          </div>
+          <div class="form-group contact-form">
+            <%= f.input :email, input_html: {class: 'form-control form-form'}, label_html: {class: 'label-contact'}, label: 'Email', required: true %>
+          </div>
+          <div class="form-group contact-form">
+            <%= f.input :subject, input_html: {class: 'form-control form-form'}, label_html: {class: 'label-contact'}, label: 'Temat wiadomości' %>
+          </div>
+          <div class="form-group contact-form">
+            <%= f.input :message, :as => :text, input_html: {class: 'form-control form-form'}, label_html: {class: 'label-contact'}, label: 'Wiadomość', required: true %>
+          </div>
+          <div class="form-group contact-form">
+            <%= f.button :submit, 'Wyślij wiadomość', class: "btn btn-primary btn-send" %>
+          </div>
+      <% end %>
+    </div>
+
+    <div class="col-md-4 contact-grids">
+      <div class="contact-grid">
+        <div class="contact-grid1">
+          <div class="contact-grid2 ">
+            <i class="glyphicon glyphicon-map-marker" aria-hidden="true"></i>
+          </div>
+          <div class="contact-grid3">
+            <h4>Adres</h4>
+
+            <p>os. Piastów 41,  <span>31-625 Kraków.</span></p>
+          </div>
+        </div>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-grid1">
+          <div class="contact-grid2">
+            <i class="glyphicon glyphicon-earphone" aria-hidden="true"></i>
+          </div>
+          <div class="contact-grid3">
+            <h4>Telefon</h4>
+
+            <p>+12 647 49 37<span>515 386 831</span><span>509 788 642</span></p>
+          </div>
+        </div>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-grid1">
+          <div class="contact-grid2">
+            <i class="glyphicon glyphicon-envelope" aria-hidden="true"></i>
+          </div>
+          <div class="contact-grid3">
+            <h4>Email</h4>
+
+            <p><a href="mailto:info@example.com">mbupolisa.piastow@op.pl</a></p>
+          </div>
+        </div>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-grid1">
+          <div class="contact-grid2">
+            <i class="glyphicon glyphicon-envelope" aria-hidden="true"></i>
+          </div>
+          <div class="contact-grid3">
+            <h4>Godziny otwarcia</h4>
+
+            <p><a href="mailto:info@example.com">Poniedziałek-Piątek 9:00-19:00</a><span>Sobota 10:00-14:00</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="map" style="width:100%;height:500px"></div>
+</div>
+
+<script>
+    $(document).ready(function ($) {
+        $('.nav li').removeClass('active');
+        $('#contact_menu').addClass('active');
+    })
+
+    function initMap() {
+        var myLatLng = {lat: 50.0985449, lng: 20.013811};
+
+        var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 17,
+            center: myLatLng
+        });
+
+        var contentString = '<div id="content">'+
+                '<div id="siteNotice">'+
+                '</div>'+
+                '<h1 id="firstHeading" class="firstHeading">Biuro Ubezpieczeń PARTNER PLUS </h1>'+
+                '<div id="bodyContent">'+
+                '<p><b>Agencja ubezpieczeniowa</b>, znajdująca się na <b>os. Piastów 41</b>, posiada ponad piętnastoletnie doświadczenie w branży. ' +
+                'Specjalizuje się w doborze najkorzystejszych ubezpieczeń dla klientów indywidualnych oraz dla firm.'+
+                '<div class="col-md-6"><img src="assets/biuro1.jpg" alt="Mountain View" style="width:304px;height:228px;"></div>' +
+                '<div class="col-md-6"><img src="assets/biuro2.jpg" alt="Mountain View" style="width:304px;height:228px;"></div>' +
+                '<p>Zobacz na mapie: <a href="https://www.google.com/maps/place/Biuro+Ubezpiecze%C5%84+PARTNER+PLUS/@50.098397,20.0128567,18z/data=!3m1!4b1!4m5!3m4!1s0x47164552d462a9f5:0x565718779057d2d7!8m2!3d50.098397!4d20.013951?hl=pl-US">'+
+                'Klik</a> '+
+                '(last visited June 22, 2009).</p>'+
+                '</div>'+
+                '</div>';
+
+        var infowindow = new google.maps.InfoWindow({
+            content: contentString
+        });
+
+        var marker = new google.maps.Marker({
+            position: myLatLng,
+            map: map,
+            title: 'Ubezpieczenia'
+        });
+
+        marker.addListener('click', function() {
+            infowindow.open(map, marker);
+        });
+
+    }
+</script>
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDAh2SHxDHMKyQXgATdyKh9hHo_SnME0nU&callback=initMap">
+</script>

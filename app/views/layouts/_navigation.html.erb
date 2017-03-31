@@ -1,0 +1,88 @@
+
+  <nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+    <!-- <nav class="navbar navbar-default"> -->
+      <div class="navbar-header navbar-left">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <%= link_to image_tag("logo_lew.png", size: "280x90"), root_path %>
+      </div>
+      <div class="collapse navbar-collapse navbar-right" id="navbar-collapse">
+        <nav class="menu menu--shylock">
+          <ul class="nav navbar-nav link-effect-7">
+            <li id="about_company_menu"><%= link_to 'STRONA GŁÓWNA', root_path %></li>
+            <li id="offer_menu"><%= link_to 'OFERTA', oferta_path %></li>
+            <li id="calculator_menu"><%= link_to 'KALKULATOR OC', kalkulator_path %></li>
+            <li id="download_menu"><%= link_to 'DO POBRANIA', do_pobrania_path %></li>
+            <li id="contact_menu"><%= link_to 'KONTAKT', contact_path %></li>
+          </ul>
+        </nav>
+      </div>
+    <!-- </nav> -->
+  </div>
+  </nav>
+
+  <div id="carousel-example-generic2" class="carousel slide">
+  <!-- Wskaźniki w postaci kropek -->
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-example-generic2" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-generic2" data-slide-to="1"></li>
+    <li data-target="#carousel-example-generic2" data-slide-to="2"></li>
+  </ol>
+
+
+  <!-- Slajdy -->
+  <div class="carousel-inner">
+
+
+    <div class="item active banner banner1"><div class="banner_info">
+      <div class="container">
+        <div class="col-md-4 header_left"></div>
+        <div class="col-md-8 header_right">
+          <ul>
+            <li><i class="glyphicon glyphicon-phone"></i>ZADZWOŃ DO NAS<span>+12 647 49 37</span>
+            <li><i class="glyphicon glyphicon-envelope"></i>NAPISZ DO NAS
+              <span><a href="mailto:info@example.com">mbupolisa.piastow@op.pl</a></span>
+          </ul>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+    </div></div>
+    <div class="item banner banner2"><div class="banner_info">
+      <div class="container">
+        <div class="col-md-4 header_left"></div>
+        <div class="col-md-8 header_right">
+          <ul>
+            <li><i class="glyphicon glyphicon-phone"></i>ZADZWOŃ DO NAS<span>+12 647 49 37</span>
+            <li><i class="glyphicon glyphicon-envelope"></i>NAPISZ DO NAS
+              <span><a href="mailto:info@example.com">mbupolisa.piastow@op.pl</a></span>
+          </ul>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+    </div></div>
+    <div class="item banner banner3"><div class="banner_info">
+      <div class="container">
+        <div class="col-md-4 header_left"></div>
+        <div class="col-md-8 header_right">
+          <ul>
+            <li><i class="glyphicon glyphicon-phone"></i>ZADZWOŃ DO NAS<span>+12 647 49 37</span>
+            <li><i class="glyphicon glyphicon-envelope"></i>NAPISZ DO NAS
+              <span><a href="mailto:info@example.com">mbupolisa.piastow@op.pl</a></span>
+          </ul>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+    </div></div>
+  </div>
+  <a class="left carousel-control" href="#carousel-example-generic2" data-slide="prev">
+    <span class="icon-prev"></span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example-generic2" data-slide="next">
+    <span class="icon-next"></span>
+  </a>
+</div>

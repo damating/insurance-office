@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>InsuranceCompany</title>
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <link href='http://fonts.googleapis.com/css?family=Advent+Pro&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Exo&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Exo+2&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
+
+    <%= javascript_include_tag 'application' %>
+    <%= csrf_meta_tags %>
+    <%= javascript_include_tag 'https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.10/jquery.mask.min.js' %>
+  </head>
+
+  <body data-spy="scroll" data-target="#myScrollspy">
+    <%= render 'layouts/navigation' %>
+    <%= yield %>
+    <%= render 'layouts/footer' %>
+  </body>
+</html>

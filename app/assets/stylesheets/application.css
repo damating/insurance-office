@@ -1,0 +1,781 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require twitter-bootstrap-static/bootstrap
+ *= require twitter-bootstrap-static/fontawesome
+ *= require_tree .
+ *= require_self
+ */
+
+:root {
+    --red:  #e30a33;
+    --light-grey: #e9e9e9; /*navbar, about_us*/
+    --dark-grey: #474047;
+    --grey-text: #777;
+    --brand-color: #2b82ad; /*logo*/
+    --dark-blue: #394466;
+    --light-blue: #599cd8;
+    --info-text: #5bc0de;
+    --white-text: white;
+    --black-text: #212121;
+}
+
+body {
+    font-family: 'Exo 2', sans-serif !important;
+    padding-top: 90px;
+}
+
+.navbar-nav > li > a {
+    line-height: 40px;
+}
+
+.navbar {
+    min-height: 90px;
+    background: var(--light-grey);
+    margin-bottom: 0;
+}
+
+.navbar-default {
+    border: none;
+}
+
+.navbar-brand {
+    color: var(--light-blue) !important;
+    padding: 15px 0;
+    font-size: 1.3em;
+    line-height: 40px;
+    height: 0;
+
+}
+
+.first-name {
+    color: var(--black-text) !important;
+    padding-left: 25px;
+}
+
+.second-name {
+    color: var(--light-blue) !important;
+    padding-left: 15px;
+}
+
+#logo-img {
+    margin-top: 3%;
+}
+
+.brand-div {
+    float: right;
+}
+
+@media (max-width: 1080px) {
+    .navbar-brand {
+        font-size: 1.2em;
+    }
+}
+
+@media (max-width: 991px) {
+    .navbar-collapse {
+        padding: 0;
+    }
+
+    .navbar-nav > li > a {
+        padding: 31px 0 18px;
+    }
+
+    .link-effect-7 a {
+        margin: 0 16px;
+    }
+
+    .banner_info {
+        padding-bottom: 0;
+        /*padding: 2em 0;*/
+    }
+    .carousel-inner{
+        margin-top: 70px;
+    }
+}
+
+.btn-send {
+    padding: 8px 50px;
+    margin-top: 2em;
+}
+
+.services-text > .btn-default {
+    float: right;
+    margin-right: 10px;
+    background-color: var(--light-grey);
+}
+
+.services-text > .btn-default:hover, .btn-default:focus {
+    background-color: #cecece;
+    border-color: #b7b5b5;
+}
+
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+    color: var(--white-text);
+    background-color: transparent;
+}
+
+.navbar-nav > li > a {
+    font-size: 15px;
+    padding: 25px 0;
+    text-transform: uppercase;
+    transition: all 0.5s ease-in-out;
+    -webkit-transition: all 0.5s ease-in-out;
+}
+
+.navbar-nav > li > a:focus, .navbar-nav > li > a:hover {
+    color: var(--white-text) !important;
+}
+
+.navbar-nav .active {
+    background-color: var(--red);
+}
+
+.nav li:hover {
+    background-color: var(--red);
+}
+
+.nav li {
+    border-left: 1px solid #d2d6d5;
+}
+
+.link-effect-7 a {
+    text-shadow: none;
+    margin: 0 20px;
+    -moz-transition: 0.3s;
+    -o-transition: 0.3s;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Exo 2', sans-serif;
+    margin: 0 !important;
+}
+
+p, ul li, ol li {
+    font-size: 18px !important;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+/*BANNER*/
+
+.banner {
+    min-height: 800px;
+    background-size: cover !important;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -ms-background-size: cover;
+    /*background-position-y: -100px !important;*/
+}
+
+.banner1 {
+    background: url(banner3.png) no-repeat 0px 0px;
+}
+
+.banner2 {
+    background: url(banner2.png) no-repeat 0px 0px;
+}
+
+.banner3 {
+    background: url(banner1.png) no-repeat 0px 0px;
+}
+
+.banner_info {
+    background: rgba(71, 71, 71, 0.67) !important;
+}
+
+/*BANNER INFO*/
+.header_right ul li {
+    font-size: 16px;
+    color: var(--white-text);
+    list-style-type: none;
+    display: inline-block;
+    margin-right: 10px;
+    border-right: 1px solid #c7c7c7;
+    padding: 17px 19px 17px 49px;
+}
+
+.header_right ul li span {
+    display: block;
+    font-size: 25px;
+    font-weight: 600;
+    margin: 3px 0 0 25px;
+    color: var(--info-text);
+}
+
+.header_right ul li:nth-child(2) {
+    border: none;
+}
+
+.header_right ul li i {
+    left: -27px;
+    font-size: 29px;
+    top: 21px;
+    color: white;
+}
+
+.header_right ul li a {
+    color: var(--info-text);
+    text-decoration: none;
+}
+
+/*PARTNERS*/
+.quality {
+    padding: 70px 0px;
+    background: white;
+}
+
+.quality h3 {
+    font-size: 35px;
+    text-align: center;
+    margin-bottom: 55px;
+    text-transform: uppercase;
+}
+
+.company_logo {
+    display: none;
+}
+
+/*ABOUT US*/
+
+.about_us, .calculate_page, .news-left, .download_page {
+    padding: 3em 0;
+}
+
+.news-left {
+    position: relative;
+}
+
+.about_us {
+    background: var(--light-grey);
+}
+
+h3.head, h3.agileits-title {
+    font-size: 2em;
+    color: var(--black-text);
+    text-transform: capitalize;
+    text-align: center;
+    padding: .5em 0 0.5em;
+    position: relative;
+}
+
+h3.head:after, h3.agileits-title:after {
+    content: '';
+    background: var(--light-blue);
+    width: 10%;
+    height: 3px;
+    position: absolute;
+    bottom: 0%;
+    left: 45%;
+}
+
+p.company_info {
+    padding: 3em 0;
+    text-align: center;
+    font-size: 1.2em;
+    line-height: 1.8em;
+}
+
+.centered_button {
+    text-align: center;
+}
+
+/*SERVICES*/
+.services {
+    padding: 3em 0;
+}
+
+.services-row {
+    overflow: hidden;
+}
+
+.affix-top,.affix{
+ position: static;
+}
+
+@media (min-width: 1700px) {
+  #sidebar.affix-top {
+    position: static;
+    margin-top: 30px;
+    width: 262px;
+  }
+
+  #sidebar.affix {
+    position: fixed;
+    top:90px;
+    width: 262px;
+  }
+}
+
+
+@media (min-width: 979px) {
+  #sidebar.affix-top {
+    position: static;
+    margin-top: 30px;
+    width: 228px;
+  }
+
+  #sidebar.affix {
+    position: fixed;
+    top:90px;
+    width: 228px;
+  }
+}
+
+#sidebar li.active {
+  border-right-width: 5px;
+}
+
+/*
+* images
+*/
+
+.services-image {
+    padding: 0;
+    background-size: cover !important;
+    min-height: 400px;
+    -webkit-transition: .5s all;
+    -moz-transition: .5s all;
+    -o-transition: .5s all;
+    -ms-transition: .5s all;
+    transition: .5s all;
+}
+
+.services-image.services-image-right {
+    float: right;
+    background-size: cover;
+    min-height: 400px;
+}
+
+/*
+image for each service
+*/
+.services-image.services-image-comunication {
+    background: url(comunication_insurance2.png) no-repeat center 0px;
+}
+
+.services-image.services-image-cargo {
+    background: url(cargo.png) no-repeat center 0px;
+}
+
+.services-image.services-image-injuries {
+    background: url(ponton.jpg) no-repeat center 0px;
+}
+
+.services-image.services-image-liability {
+    background: url(liability.png) no-repeat center 0px;
+}
+
+.services-image.services-image-life {
+    background: url(family2.png) no-repeat center 0px;
+}
+
+.services-image.services-image-tourist {
+    background: url(airplane.png) no-repeat center 0px;
+}
+
+.services-image.services-image-agriculture {
+    background: url(argiculture.png) no-repeat center 0px;
+}
+
+.services-image.services-image-property {
+    background: url(property_insurance.png) no-repeat center 0px;
+}
+
+.services-image.services-image-companies {
+    background: url(service_photos/picture_company.png) no-repeat center 0px;
+}
+
+.services-text {
+    padding: 7em 10em;
+    background: var(--dark-blue);
+    height: 400px;
+}
+
+.services-text.services-text-light {
+    background: var(--light-blue);
+}
+
+.services-row:hover .services-image {
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
+@media (min-width: 1080px) {
+    .date-in:hover .month-in {
+        width: 100%;
+    }
+}
+
+h3.agileits-title {
+    margin-bottom: 2em !important;
+}
+
+h4.w3agile-sbtitle {
+    font-size: 1.8em;
+    color: var(--white-text);
+    position: relative;
+    font-weight: 300;
+    margin-bottom: 1em !important;
+    padding-bottom: 0.8em;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+h4.w3agile-sbtitle:after {
+    width: 6%;
+    height: 2px;
+    background: var(--white-text);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    content: '';
+}
+
+p {
+    font-size: 1em;
+    line-height: 1.8em;
+    color: var(--grey-text);
+}
+
+.services p {
+    color: var(--white-text);
+    font-weight: 300;
+}
+
+/*CUSTOMERS INFO*/
+.info_w3ls3 {
+    padding: 4em 0 7em;
+}
+
+/*FOOTER*/
+
+.footer {
+    background: var(--dark-grey);
+    padding: 6em;
+}
+
+.w3agile_footer_copy {
+    margin: 3em 0 0;
+    padding: 1em 0;
+    border-top: 1px solid #999;
+    border-bottom: 1px solid #999;
+    text-align: center;
+}
+
+/*col 1*/
+.agileinfo_footer_grid h2 a {
+    font-size: 1.2em;
+    color: var(--light-blue);
+    text-decoration: none;
+}
+
+.agileinfo_footer_grid p {
+    color: var(--grey-text);
+    margin: 1em 0 2em;
+    line-height: 2em;
+}
+
+/*col 2*/
+.agileinfo_footer_grid h3 {
+    font-size: 1.5em;
+    color: var(--light-grey);
+    margin-top: 15px !important;
+    position: relative;
+    margin-bottom: 1.5em !important;
+}
+
+.agileinfo_footer_grid ul.agileinfo_footer_grid_list li, .agileinfo_footer_grid_nav li {
+    list-style-type: none;
+    margin-bottom: 1em;
+    color: var(--grey-text);
+}
+
+.agileinfo_footer_grid ul.agileinfo_footer_grid_list li i {
+    color: var(--light-grey);
+    border: 1px solid #999;
+    padding: .5em;
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -o-border-radius: 100%;
+    -ms-border-radius: 100%;
+    margin-right: 1em;
+}
+
+/*col 3*/
+
+.agileinfo_footer_grid_nav li span {
+    /*color:  var(--white-text);*/
+    padding-right: 1.5em;
+}
+
+.agileinfo_footer_grid ul.agileinfo_footer_grid_list li a, .agileinfo_footer_grid_nav li a {
+    color: var(--grey-text);
+    text-decoration: none;
+}
+
+/*SERVICES PAGE*/
+#sidebar {
+    width: 262px!important;
+}
+
+.nav > li > a {
+    color: rgb(119, 119, 119);
+}
+
+.nav > li > a:hover, .nav > li > a:focus{
+    background-color: transparent !important;
+}
+
+.date-in {
+    overflow: hidden;
+    position: relative;
+    display: block;
+}
+
+.date-in .month-in {
+    position: absolute;
+    height: 100%;
+    width: 50%;
+    top: 0;
+    left: 0;
+    background: rgba(71, 71, 71, 0.72);
+    text-align: center;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    padding-top: 6.5em;
+}
+
+.month-in span {
+    padding: 35px 30px;
+    -webkit-border-radius: 100%;
+    -o-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -moz-border-radius: 100%;
+}
+
+.month-in p {
+    color: #fff;
+    font-size: 15px;
+    margin-top: 10px !important;
+}
+
+.row_service {
+    margin-bottom: 34px;
+    margin-top: 34px;
+}
+
+.col_service h4 {
+    color: var(--light-blue);
+    font-size: 30px;
+}
+
+.col_service p {
+    color: #464646;
+    font-size: 15px;
+    line-height: 2.2em;
+    margin: 25px 0;
+}
+
+.col_service ul li, .download_page ul li {
+    color: #464646;
+    font-size: 15px;
+    list-style-type: none;
+    line-height: 2.5em;
+}
+
+.col_service ul li span, .download_page ul li span {
+    color: var(--red);
+    font-size: 11px;
+    margin-right: 15px;
+    top: 0px;
+}
+
+.featurette-divider {
+/*    margin: 80px 0;*/
+    margin-top: 50px;
+    margin-bottom: 100px;
+}
+
+.pull-right {
+    margin-left: 30px;
+    margin-bottom: 10px;
+}
+
+.pull-left {
+    margin-right: 30px;
+    margin-bottom: 5px;
+}
+
+/*CONTACT AND CALCULATE PAGE*/
+
+.services_page, .contact_page {
+    padding-top: 3em;
+}
+
+.new_contact {
+    padding: 3em 0;
+}
+
+.contact-form {
+    margin-bottom: 2em;
+}
+
+.label-date {
+    width: 100%;
+}
+
+.label-contact {
+    margin: 0 0 .5em !important;
+    font-size: 18px;
+    font-weight: normal;
+    font-family: 'Exo', sans-serif;
+}
+
+.form-form {
+    border-radius: 0px;
+}
+
+.date-form {
+    display: inline;
+    margin-right: 7px;
+    border-radius: 0px;
+    width: 30%;
+}
+
+.date-form-licence {
+    width: 45%;
+}
+
+.contact-grids {
+    padding: 3em 15px;
+}
+
+.contact-grid {
+    margin-bottom: 1.8em;
+}
+
+.contact-grid1 {
+    text-align: center;
+    background: var(--light-grey);
+}
+
+.contact-grid1 i {
+    font-size: 1.5em;
+    color: black;
+    margin-top: 0.6em;
+}
+
+.contact-grid3 {
+    padding: 0.8em;
+}
+
+.contact-grid1 h4 {
+    font-size: 1.5em;
+    color: var(--red);
+    margin: 0em 0 0.4em !important;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.contact-grid1 p {
+    font-size: 1em;
+    color: var(--grey-text);;
+    line-height: 1.5em;
+    margin: 0;
+}
+
+.contact-grid1 p span {
+    display: block;
+}
+
+.contact-grid1 p a {
+    color: var(--grey-text);;
+    text-decoration: none;
+}
+
+textarea.form-control {
+    resize: none;
+    min-height: 219px;
+}
+
+abbr[title="required"] {
+    display: none;
+}
+
+/*MODAL*/
+
+.modal-dialog {
+    margin-top: 250px;
+}
+
+.modal-content {
+    padding-bottom: 20px;
+}
+
+.modal-header {
+    border-bottom: none;
+}
+
+/* make sidebar nav vertical */
+@media (min-width: 768px) {
+    .affix-sidebar {
+        padding-right: 0;
+        font-size: small;
+    }
+
+    .sidebar-nav .navbar .navbar-collapse {
+        padding: 0;
+        max-height: none;
+    }
+
+    .sidebar-nav .navbar {
+        border-radius: 0;
+        margin-bottom: 0;
+        border: 0;
+    }
+
+    .sidebar-nav .navbar ul {
+        float: none;
+        display: block;
+    }
+
+    .sidebar-nav .navbar li {
+        border: none;
+        float: none;
+        display: block;
+    }
+
+    .sidebar-nav .navbar li a {
+        padding-top: 12px;
+        padding-bottom: 12px;
+    }
+
+    .navbar-default .navbar-nav .active > a {
+        color: white;
+    }
+
+    .vertical-menu-element {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+}
+
