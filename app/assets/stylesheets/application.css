@@ -188,15 +188,15 @@ ul {
 }
 
 .banner1 {
-    background: url(banner3.png) no-repeat 0px 0px;
+    background: image-url(banner3.png) no-repeat 0px 0px;
 }
 
 .banner2 {
-    background: url(banner2.png) no-repeat 0px 0px;
+    background: image-url(banner2.png) no-repeat 0px 0px;
 }
 
 .banner3 {
-    background: url(banner1.png) no-repeat 0px 0px;
+    background: image-url(banner1.png) no-repeat 0px 0px;
 }
 
 .banner_info {
@@ -370,39 +370,39 @@ p.company_info {
 image for each service
 */
 .services-image.services-image-comunication {
-    background: url(comunication_insurance2.png) no-repeat center 0px;
+    background: image-url(comunication_insurance2.png) no-repeat center 0px;
 }
 
 .services-image.services-image-cargo {
-    background: url(cargo.png) no-repeat center 0px;
+    background: image-url(cargo.png) no-repeat center 0px;
 }
 
 .services-image.services-image-injuries {
-    background: url(ponton.jpg) no-repeat center 0px;
+    background: image-url(ponton.jpg) no-repeat center 0px;
 }
 
 .services-image.services-image-liability {
-    background: url(liability.png) no-repeat center 0px;
+    background: image-url(liability.png) no-repeat center 0px;
 }
 
 .services-image.services-image-life {
-    background: url(family2.png) no-repeat center 0px;
+    background: image-url(family2.png) no-repeat center 0px;
 }
 
 .services-image.services-image-tourist {
-    background: url(airplane.png) no-repeat center 0px;
+    background: image-url(airplane.png) no-repeat center 0px;
 }
 
 .services-image.services-image-agriculture {
-    background: url(argiculture.png) no-repeat center 0px;
+    background: image-url(argiculture.png) no-repeat center 0px;
 }
 
 .services-image.services-image-property {
-    background: url(property_insurance.png) no-repeat center 0px;
+    background: image-url(property_insurance.png) no-repeat center 0px;
 }
 
 .services-image.services-image-companies {
-    background: url(service_photos/picture_company.png) no-repeat center 0px;
+    background: image-url(service_photos/picture_company.png) no-repeat center 0px;
 }
 
 .services-text {
