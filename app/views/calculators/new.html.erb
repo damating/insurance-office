@@ -3,15 +3,6 @@
     <h3 class="agileits-title">Kalkulator OC</h3>
 
     <%= simple_form_for @calculator do |f| %>
-
-        <% if @calculator.errors.any? %>
-          <ul>
-            <% @calculator.errors.full_messages.each do |msg| %>
-              <li><%= msg %></li>
-            <% end %>
-          </ul>
-        <% end %>
-
         <div class="row">
             <div class="col-md-6 form-group contact-form">
               <%= f.input :contact_name, :as => :string, input_html: {class: 'form-control form-form'}, label_html: {class: 'label-contact'}, label: 'Imię i nazwisko', required: true %>
@@ -29,7 +20,19 @@
             </div>
         </div>
         <div class="row">
-
+          <div class="col-md-6 form-group contact-form">
+            <%= f.input :owner_birth, as: :date, start_year: Date.today.year - 80,
+                        end_year: Date.today.year - 16, order: [:day, :month, :year], selected: Date.today.beginning_of_year,
+                        input_html: {class: 'form-control date-form'}, label_html: {class: 'label-contact label-date'}, label: 'Data urodzenia właściciela' %>
+          </div>
+          <div class="col-md-4 form-group contact-form">
+            <%= f.input :driving_licence_issue_date, as: :date, start_year: Date.today.year - 80,
+                         end_year: Date.today.year, discard_day: true, order: [:month, :year], selected: Date.today.beginning_of_year,
+                         input_html: {class: 'form-control date-form date-form-licence'}, label_html: {class: 'label-contact label-date'}, label: 'Data wydania prawo jazdy' %>
+          </div>
+          <div class="col-md-2 form-group contact-form">
+            <%= f.input :year, collection: 1980..Date.today.year, selected: Date.today.year, input_html: {class: 'form-control form-form'}, label_html: {class: 'label-contact'}, label: 'Rok produkcji' %>
+          </div>
         </div>
         <div class="row">
             <div class="col-md-4 form-group contact-form">

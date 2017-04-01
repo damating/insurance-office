@@ -13,7 +13,7 @@ class CalculatorsController < ApplicationController
       flash[:notice] = 'Dziękujemy za wiadomość. Skontaktujemy się jak najszybciej!'
       redirect_to root_path
     else
-      # flash[:error] = 'Nie można wysłać wiadomości.'
+      flash.now[:error] = 'Nie można wysłać wiadomości.'
       render :new
     end
   end

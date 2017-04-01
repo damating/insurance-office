@@ -103,6 +103,10 @@ body {
     }
 }
 
+button.close {
+    font-family: -webkit-body;
+}
+
 .btn-send {
     padding: 8px 50px;
     margin-top: 2em;
