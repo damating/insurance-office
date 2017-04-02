@@ -341,6 +341,12 @@ p.company_info {
   }
 }
 
+@media (max-width: 1170px) {
+  #sidebar {
+    display: none;
+  }
+}
+
 #sidebar li.active {
   border-right-width: 5px;
 }
