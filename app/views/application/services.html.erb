@@ -280,10 +280,10 @@
       var target = $(this.hash);
       target = target.length ? target : $('[name=' + this.hash.substr(1) + ']');
       if (target.length) {
-          $('html,body').animate({
-              scrollTop: target.offset().top - 120
-          }, 1000);
-          return false;
+        $('html,body').animate({
+          scrollTop: target.offset().top - 120
+        }, 1000);
+        return false;
       }
     });
   });
@@ -291,8 +291,8 @@
   $(window).scroll(function () {
     var distanceFromTop = $("#leftCol").offset().top - $(window).scrollTop();
     if (distanceFromTop < 100 && $(window).width() > 900) {
-        $("#sidebar").addClass("affix");
-        $("#sidebar").css("top", "90px");
+      $("#sidebar").addClass("affix");
+      $("#sidebar").css("top", "90px");
     }
 
     var distanceFromTop2 = $("#leftCol").offset().top - $(window).scrollTop();
