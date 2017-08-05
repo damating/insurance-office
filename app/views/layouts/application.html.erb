@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>InsuranceCompany</title>
+    <% if content_for? :for_head %>
+      <%= yield :for_head %>
+    <% end %>
+
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <link href='https://fonts.googleapis.com/css?family=Exo+2&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
     <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
